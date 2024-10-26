@@ -11,13 +11,13 @@ export const LoginContainer= styled(Flex)`
 `;
 
 export const FormContainer= styled(Flex)`
-  width: 40rem;
-  height: 40rem;
+  width: 35rem;
+  height: 35rem;
   max-width: 50rem;
-  background: rgba(0, 173, 181, 0.5);
+  background: rgba(0, 173, 181, 0.4);
   border-radius: 50%;
   border: 2px solid #e1f1dd;
-  padding: 0.5rem;
+  padding: 2rem;
   flex-direction: column;
 `;
 
@@ -30,7 +30,7 @@ export const StyledInput = styled.input`
 
             height: 3rem;
             font-size: 2rem;
-            width: 15rem;
+            width: 16rem;
             border-radius: 5px;
             background-color: rgba(0, 0, 0, 0.6 );
             border: none;
@@ -62,7 +62,7 @@ export const StyledButton = styled.button`
 
 export const StyledImg = styled.img`
 
-            width: 150px;
+            width: 180px;
             margin: 1rem;
 
 `;
