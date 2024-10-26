@@ -12,6 +12,7 @@ const AppRouter = () => {
   return (
     <BrowserRouter>
     <GlobalStyles/>
+    <Login/>
     <Navbar/>
     <Routes>
         <Route path="/" element={<Home/>}/>

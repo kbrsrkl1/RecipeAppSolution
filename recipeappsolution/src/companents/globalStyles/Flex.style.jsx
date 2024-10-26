@@ -7,7 +7,6 @@ const Flex = styled.div`
             align-items: ${({align}) => (align ? align : "center")};
             flex-wrap:${({wrap}) => wrap && wrap};
 
-
 `
 
 export default Flex;
