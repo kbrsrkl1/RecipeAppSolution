@@ -17,7 +17,7 @@ const Navbar = () => {
       <GiHamburgerMenu />
       </Hamburger>
 
-      <Menu>
+      <Menu isOpen = {isOpen} >
         <MenuLink to="/">Home</MenuLink>
         <MenuLink to="about">About</MenuLink>
         <MenuLink to="register">Register</MenuLink>
