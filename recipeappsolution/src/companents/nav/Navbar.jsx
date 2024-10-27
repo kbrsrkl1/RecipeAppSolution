@@ -1,11 +1,33 @@
-import React from 'react'
+import React, {useState} from 'react';
+import "./Navbar.style";
+import Nav, {Brand, Menu, MenuLink, Hamburger} from "./Navbar.style";
+import { GiHamburgerMenu } from "react-icons/gi";
 
-function Navbar() {
+const Navbar = () => {
+  const [isOpen,setIsOpen]=useState(false)
   return (
-  <>
-  Navbar kısmı burada gözükecek
-  </>
-  )
-}
+    <Nav justify="space-between" wrap="wrap">
+          <Brand to="/">
+            <i>{"<Clarusway/>"}</i>
+            <span>Recipe</span>
+      </Brand>
 
-export default Navbar
+
+      <Hamburger onClick={()=>setIsOpen(!isOpen)}>
+      <GiHamburgerMenu />
+      </Hamburger>
+
+      <Menu>
+        <MenuLink to="/">Home</MenuLink>
+        <MenuLink to="about">About</MenuLink>
+        <MenuLink to="register">Register</MenuLink>
+        <MenuLink to="logout">Logout</MenuLink>
+      </Menu>
+    </Nav>
+
+  );
+};
+
+export default Navbar;
+
+

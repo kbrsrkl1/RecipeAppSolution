@@ -14,7 +14,7 @@ const AppRouter = () => {
     <GlobalStyles/>
     <Navbar/>
     <Routes>
-        <Route path="home" element={<Home/>}/>
+        <Route path="/" element={<Home/>}/>
         <Route path="login" element={<Login/>}/>
         <Route path="about" element={<PrivateRouter/>}>
             <Route path="" element={<About/>}/>
