@@ -53,7 +53,7 @@ export const StyledButton = styled.button`
 
 export const StyledButtons = styled.button`
             font-size: 2rem;
-            padding: 5px 5px;
+            padding: 4px 3px;
             background: rgba(0, 0, 0, 0.6);
             border-radius: 5px;
             color: white;
