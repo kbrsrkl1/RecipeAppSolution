@@ -1,9 +1,41 @@
-import React from 'react'
+import React from 'react';
+import { LoginContainer, FormContainer, StyledImg, StyledForm, StyledInput, StyledButton, Header, StyledForms, StyledButtons } from "./Login.style";
+import meal from "../../assets/meal.svg"
+import { useNavigate } from 'react-router-dom';
 
-function Login() {
+const Login = () => {
+  const navigate = useNavigate();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    navigate("/")
+  }
+
+  const handleForms = (f) => {
+    f.preventDefault();
+    navigate("/signup")
+  }
+
+
   return (
-    <div>Login</div>
-  )
-}
+    <LoginContainer>
+        <FormContainer>
+            <StyledImg  src={meal}/>
+            <Header>
+              {"<CW/>"} Recipe
+            </Header>
+            <StyledForm  onSubmit={handleSubmit}>
+              <StyledInput  placeholder = "Enter username" type="text"/>
+              <StyledInput  placeholder = "Enter password" type="password"/>
+              <StyledButton>Login</StyledButton>
+            </StyledForm>
 
-export default Login
+            <StyledForms onSubmit={handleForms}>
+            <StyledButtons>Sign Up</StyledButtons>
+            </StyledForms>
+
+        </FormContainer>
+    </LoginContainer>
+  );
+};
+
+export default Login;
