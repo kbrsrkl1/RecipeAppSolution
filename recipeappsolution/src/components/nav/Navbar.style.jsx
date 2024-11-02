@@ -4,10 +4,12 @@ import {Link} from "react-router-dom"
 import theme from "../../components/globalStyles/theme"
 
 
-export const Nav=styled(Flex)`
-        padding: 1rem 1.5rem;
-        background-color: ${({ theme }) => theme.colors.navbarBgColor};
-`;
+export const Nav = styled(Flex).withConfig({
+    shouldForwardProp: (prop) => !['justify'].includes(prop),
+  })`
+    padding: 1rem 1.5rem;
+    background-color: ${({ theme }) => theme.colors.navbarBgColor};
+  `;
 
 export const Brand=styled(Link)`
         color:${({theme}) => theme.colors.logoColor};
@@ -20,15 +22,16 @@ export const Brand=styled(Link)`
             }
 `;
 
-export const Menu= styled(Flex)`
-        @media (max-width: ${({theme}) => theme.screens.lg}) {
-            flex-direction: column;
-            width: 100%;
-            max-height: ${({isOpen}) => isOpen ? "400px" : "0"};
-            overflow: hidden;
-        }
-
-`;
+export const Menu = styled(Flex).withConfig({
+    shouldForwardProp: (prop) => !['isOpen'].includes(prop),
+  })`
+    @media (max-width: ${({ theme }) => theme.screens.lg}) {
+      flex-direction: column;
+      width: 100%;
+      max-height: ${({ isOpen }) => (isOpen ? "400px" : "0")};
+      overflow: hidden;
+    }
+  `;
 
 export const MenuLink = styled(Link)`
         text-align: center;

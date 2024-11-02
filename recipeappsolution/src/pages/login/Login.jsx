@@ -13,7 +13,7 @@ const Login = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     sessionStorage.setItem("user", JSON.stringify(userInfo))
-    navigate("/")
+    navigate("-1")
   }
 
   const handleForms = (f) => {
