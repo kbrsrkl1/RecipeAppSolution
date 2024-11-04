@@ -59,4 +59,4 @@ export const Select = styled.select`
     height: 3rem;
     border: none;
     font-size: 2rem;
-`
+`;
