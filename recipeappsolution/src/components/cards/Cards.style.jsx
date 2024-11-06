@@ -6,8 +6,8 @@ export const MainContainer = styled(Flex)`
 `;
 export const Card = styled(Flex)`
   flex-direction: column;
-  height: 22rem;
-  width: 22rem;
+  height: 21rem;
+  width: 21rem;
   background: ${({ theme }) => theme.colors.navbarBgColor};
   padding: 0.5rem;
   border-radius: 3px;
