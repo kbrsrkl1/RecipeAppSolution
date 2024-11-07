@@ -42,6 +42,12 @@ export const HeaderContainer = styled(Flex)`
 `;
 
 
+export const IngContainer = styled.div`
+                width: 350px;
+                font-size: 2rem;
+                margin: 2rem;
+`
+
 export const OtherPart = styled.div`
                 width: 400px;
                 text-align: right;
